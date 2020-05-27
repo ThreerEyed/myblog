@@ -1,0 +1,17 @@
+class:
+  class_name: 友情链接
+  link_list:
+    1:
+      name: JerryC
+      link: https://jerryc.me/
+      avatar: https://jerryc.me/image/avatar.png
+      descr: 今日事，今日畢 
+
+class2:
+  class_name: 链接无效
+  link_list:
+    1:
+      name: 
+      link: 
+      avatar: 
+      descr: 
