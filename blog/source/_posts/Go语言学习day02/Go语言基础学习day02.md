@@ -1,15 +1,10 @@
 ---
-title: Go语言基础学习day02
+title: Go语言基础学习day02（数据类型、变量、常量）
 date: 2020-05-25 09:57:50
-tags: 
-  - go
-categories: 
-  - Go语言基础
-keywords: 
-  - 变量
-  - 常量
-  - 关键字
-description: 
+tags: go
+categories: Go语言基础
+keywords: 变量, 常量, 关键字
+description: Go语言基础之数据类型、变量、常量
 top_img: https://i.loli.net/2020/05/23/H9yRgArpw2NM4ne.jpg
 comments: true
 cover: https://i.loli.net/2020/05/23/H9yRgArpw2NM4ne.jpg

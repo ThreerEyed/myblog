@@ -1,12 +1,10 @@
 ---
-title: Go语言基础学习day01
+title: Go语言基础学习day01（环境搭建）
 date: 2020-05-20 22:17:49
-tags: 
-  - go
-categories: 
-  - Go语言基础
+tags: go
+categories: Go语言基础
 keywords: 
-description: Go语言基础学习day01
+description: Go语言基础学习day01之环境搭建
 top_img: https://i.loli.net/2020/05/23/H9yRgArpw2NM4ne.jpg
 comments: true
 cover: https://i.loli.net/2020/05/23/H9yRgArpw2NM4ne.jpg

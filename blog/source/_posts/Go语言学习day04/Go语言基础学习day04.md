@@ -1,10 +1,8 @@
 ---
-title: Go语言基础学习day04
+title: Go语言基础学习day04（数组、切片）
 date: 2020-05-27 22:31:21
-tags: 
-  - go
-categories: 
-  - Go语言基础
+tags: go
+categories: Go语言基础
 keywords: 
   - 数组
   - 切片

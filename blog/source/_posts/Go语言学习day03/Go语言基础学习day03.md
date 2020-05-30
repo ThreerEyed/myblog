@@ -1,14 +1,11 @@
 ---
 
 
-title: Go语言基础学习day03
+title: Go语言基础学习day03（流程控制、运算符、函数）
 date: 2020-05-26 18:03:31
-tags:
-  - go
-categories:
-  - Go语言基础
-keywords:
-  - Go语言基础
+tags: go
+categories: Go语言基础
+keywords: Go语言基础
 description: 关于Go语言的基础学习
 top_img: https://i.loli.net/2020/05/26/SDAJuBVNXrpexls.jpg
 comments: true
