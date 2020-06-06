@@ -20,12 +20,6 @@ katex:
 
 
 
-{% note info %}
-本节内容承接上节内容[Go语言基础学习day03](https://threereyed.top/2020/05/26/Go语言学习day03/Go语言基础学习day03/)，关于Go语言的基础学习
-{% endnote %}
-
-
-
 {% note warning%}
 这是一个创建于 2020-05-27 22:31:21 的文章，其中的信息可能已经有所发展或是发生改变。
 {% endnote %}

@@ -32,14 +32,14 @@ menu:
 # PWA
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
-pwa:
-  enable: true
-  manifest: /img/pwa/manifest.json
-  theme_color: "#fff"
-  apple_touch_icon: /img/pwa/apple-touch-icon.png
-  favicon_32_32: /img/pwa/32.png
-  favicon_16_16: /img/pwa/16.png
-  mask_icon: /img/pwa/safari-pinned-tab.svg
+# pwa:
+#   enable: true
+#   manifest: /img/pwa/manifest.json
+#   theme_color: "#fff"
+#   apple_touch_icon: /img/pwa/apple-touch-icon.png
+#   favicon_32_32: /img/pwa/32.png
+#   favicon_16_16: /img/pwa/16.png
+#   mask_icon: /img/pwa/safari-pinned-tab.svg
 
 # Highlight theme
 # ---------------
@@ -507,7 +507,7 @@ blog_title_font:
 
 # 水平分隔綫
 hr:
-  enable: false
+  enable: true
   icon: '\f21c' #fontawesome上圖標的Unicode
   icon-top: -20px
 
@@ -525,12 +525,12 @@ subtitle:
   # source: 3  調用一句網（簡體） http://yijuzhan.com/
   # source: 4  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
-  # source: https://www.jinrishici.com/
+  source: 4
   # (如果有英文逗號' , '，請使用轉義字符 &#44;)
   # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
   sub:
-    - 爱你千千万万遍
-    - I love you three thousand times
+    # - 爱你千千万万遍
+    # - I love you three thousand times
 
 # fontawesome圖標
 # 默認使用的是 fontawesome v4版本的圖標

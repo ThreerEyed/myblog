@@ -17,12 +17,6 @@ katex:
 
 
 
-{% note info %}
-本节内容承接上节内容[Go语言基础学习day05](https://threereyed.top/2020/05/27/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0day04/Go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0day04/https://threereyed.top/2020/05/27/Go语言学习day04/Go语言基础学习day04/)，关于Go语言的基础学习
-{% endnote %}
-
-
-
 {% note warning%}
 这是一个创建于 2020-05-29 14:14:59的文章，其中的信息可能已经有所发展或是发生改变。
 {% endnote %}
