@@ -67,7 +67,7 @@ default_category: uncategorized
 category_map:
   Go语言基础: go_basics
   MySQL: mysql
-  Python: python
+  操作系统: os
 tag_map:
 
 # Metadata elements

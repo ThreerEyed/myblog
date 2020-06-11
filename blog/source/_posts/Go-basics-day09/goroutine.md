@@ -1,7 +1,7 @@
 ---
 title: goroutine
 date: 2020-06-05 10:35:02
-tags: go, goroutine, channel
+tags: [go, goroutine, channel]
 categories: Go语言基础
 keywords: goroutine
 description: 关于go 语言并发的学习和理解
@@ -539,3 +539,116 @@ func main() {
 - `<-chan int`是一个只读单向通道（只能从其读取int类型值），可以对其执行接收操作但是不能执行发送操作。
 
 在函数传参及任何赋值操作中可以将双向通道转换为单向通道，但反过来是不可以的。
+
+
+
+### 通道总结
+
+`channel`常见的异常总结，如下图：![channel异常总结](https://i.loli.net/2020/06/07/MiFPOsA5QC3N9yh.png)
+
+关闭已经关闭的`channel`也会引发`panic`。
+
+
+
+---
+
+
+
+### 关于通道的一个小练习
+
+```go
+/*
+使用goroutine和channel实现一个计算int64随机数各位数和的程序。
+	1. 开启一个goroutine循环生成int64类型的随机数，发送到jobChan
+	2. 开启24个goroutine从jobChan中取出随机数计算各位数的和，将结果发送到resultChan
+	3. 主goroutine从resultChan取出结果并打印到终端输出
+*/
+
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"sync"
+	"time"
+)
+
+var wg sync.WaitGroup
+
+// job ...
+type job struct {
+	value int64
+}
+
+// result ...
+type result struct {
+	job *job
+	sum int64
+}
+
+// 先创建两个通道，一个用来接收，一个用来读取
+var jobChan = make(chan *job, 100)
+var resultChan = make(chan *result, 100)
+
+func getRand(receiveChan chan<- *job) {
+	// 循环生成int64类型的随机数，发送到jobChan
+	defer wg.Done()
+	// 为了保证每一次生成的都是真正的随机数，添加随机数种子
+	rand.Seed(time.Now().Unix())
+	for {
+		// 通过rand模块的Int63
+		x := rand.Int63()
+		newJob := &job{
+			value: x,
+		}
+		receiveChan <- newJob
+		time.Sleep(time.Millisecond * 500)
+	}
+}
+
+func pushRand(gr <-chan *job, resultChan chan<- *result) {
+	defer wg.Done()
+	// 从jobChan中取出随机数计算各位数的和，将结果发送到resultChan
+	// 开启for死循环，不停的从gr管道中取值
+	for {
+		job := <-gr
+		randInt64 := job.value
+		sum := int64(0)
+		for randInt64 > 0 {
+			sum += randInt64 % 10
+			randInt64 = randInt64 / 10
+		}
+		newResult := &result{
+			job: job,
+			sum: sum,
+		}
+		resultChan <- newResult
+	}
+
+}
+
+func main() {
+	// 开启24个goroutine
+	wg.Add(1)
+	go getRand(jobChan)
+	wg.Add(24)
+	for i := 0; i < 24; i++ {
+		go pushRand(jobChan, resultChan)
+	}
+	// 主goroutine从resultChan取出结果并打印到终端输出
+	// 使用for range 的形式循环从管道中取值
+	for result := range resultChan {
+		fmt.Printf("value: %v, sum is %v\n", result.job.value, result.sum)
+	}
+
+}
+
+```
+
+
+
+{% note info %}
+
+以上部分内容来源于 [关于go语言并发](https://www.liwenzhou.com/posts/Go/14_concurrence/)
+
+{% endnote %}

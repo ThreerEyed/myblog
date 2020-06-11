@@ -6,11 +6,11 @@ categories:
 keywords: 
 description: 
 top_img: 
-comments: 
+comments: true
 cover: 
 toc: 
-toc_number: 
-copyright: 
+toc_number: true
+copyright: true
 mathjax: 
 katex: 
 ---

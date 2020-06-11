@@ -2,7 +2,7 @@
 title: Windows下PyCharm的基本快捷键
 date: 2018-05-21 14:14:59
 tags: pycharm
-categories: python
+categories: Python
 keywords: pycharm, ide
 description: 
 top_img:
